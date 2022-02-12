@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'card1.dart';
+import 'card2.dart';
+import 'card3.dart';
 
-import 'screens/explore_screen.dart';
-import 'screens/recipes_screen.dart';
-import 'screens/grocery_screen.dart';
-
+// 1
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -12,14 +12,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // Add state variables and functions
+  // 7
   int _selectedIndex = 0;
 
+// 8
   static List<Widget> pages = <Widget>[
-    ExploreScreen(),
-    RecipesScreen(),
-    const GroceryScreen(),
+    const Card1(),
+    const Card2(),
+    const Card3(),
   ];
 
+// 9
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -28,7 +32,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO 9: Wrap inside a Consumer Widget
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -36,23 +39,29 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.headline6,
         ),
       ),
+      // Show selected tab
       body: pages[_selectedIndex],
+
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        // Set selected tab bar
+        // 10
         currentIndex: _selectedIndex,
+        // 11
         onTap: _onItemTapped,
+
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Recipes',
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card2',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'To Buy',
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card3',
           ),
         ],
       ),
