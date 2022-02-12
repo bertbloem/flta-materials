@@ -1,0 +1,6 @@
+ChangeNotifier is extended by a class to 
+provide change notifications to its listeners.
+
+Bert comment: seems like ChangeNotifier uses
+" notifyListeners(); " method to communicate 
+the changes
