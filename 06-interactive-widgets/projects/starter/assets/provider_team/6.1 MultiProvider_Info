@@ -1,0 +1,8 @@
+Use MultiProvider when you need to provide more than one Provider to a widget tree. He accepts a list [] of providers for Home’s descendant widgets to access.
+
+"providers" are classes that extends ChangeNotifier this extention then allows them to be referred to as "providers" or a "provider".
+
+
+* "Home:" is a property of "MaterialApp".
+
+MultiProvider a) holds a list of providers and b) has a child property which is there to assign const Home() to.
