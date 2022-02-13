@@ -1,0 +1,7 @@
+ChangeNotifierProvider listens for changes to a ChangeNotifier. Widgets below it can -access-> the state object -and- listen to state changes.
+
+* changes to a ChangeNotifier is actually changes to the state object that the ChangeNotifier detected and informed notifyListerns about. 
+
+He in turn then shares this information but only to the consumers registered with ChangeNotifierProvider
+
+ChangeNotifierProvider creates an instance of providers listed inside its build context, these providers (see TabManager) can for example listen to tab index changes and notifies its listeners.

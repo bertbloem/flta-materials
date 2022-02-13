@@ -1,0 +1,1 @@
+Provider.of allows descendant widgets to access the state object. If you only need access to the state object and don’t need to listen for changes, use this!

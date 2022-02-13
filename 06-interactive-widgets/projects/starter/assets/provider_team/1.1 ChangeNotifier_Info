@@ -1,6 +1,8 @@
 ChangeNotifier is extended by a class to 
 provide change notifications to its listeners.
+This class that is extending ChangeNotifier allows [as the state object] change notifications to its listeners. It has that ability only because it is extending ChangeNotifier - she makes it possible through her notifyListeners method.
 
-Bert comment: seems like ChangeNotifier uses
-" notifyListeners(); " method to communicate 
-the changes
+Bert's note: ChangeNotifier makes her method
+" notifyListeners(); " available to the class
+that is extending her to communicate the changes
+to ChangeNotifierProvider registered listeners / consumers

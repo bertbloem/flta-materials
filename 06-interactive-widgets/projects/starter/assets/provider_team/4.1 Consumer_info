@@ -1,0 +1,1 @@
+Consumer wraps around part of a widget tree. She rebuilds part of a subtree -when-> the state she listens to changes.

@@ -1,0 +1,4 @@
+notifyListeners calls all the registered listeners. 
+He is called whenever the object changes so that he can notify all clients the object may have changed.
+Bert's note: Above mentioned "clients" to me is interpreted as Consumers - as in the class
+Remember ChangeNotifier makes herself available to the class that is extending her through her method notifyListeners. So if the state object changes it calls "notifyListeners"  who in turn has the ability to share this changed state information with all the Consumers registed as consumer widgets under ChangeNotifierProvider
