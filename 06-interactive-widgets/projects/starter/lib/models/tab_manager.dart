@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 // 1 TabManager extends ChangeNotifier. This allows
-// the object -TabManager- to provide change notifications to its listeners.
+// the object -TabManager- to provide change notifications to its listeners by making use of notifyListeners.
 
 class TabManager extends ChangeNotifier {
   // 2
@@ -15,6 +15,8 @@ class TabManager extends ChangeNotifier {
     // Stores the index of the new tab the user tapped.
     selectedTab = index;
     // 5
+    // Calls notifyListeners() to notify all widgets listening to this state.
+
     notifyListeners();
   }
 

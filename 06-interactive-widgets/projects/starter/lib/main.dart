@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:flutter/material.dart';
 
 import 'fooderlich_theme.dart';
@@ -24,6 +26,7 @@ class Fooderlich extends StatelessWidget {
       home: MultiProvider(
         providers: [
           // 2
+          // ChangeNotifierProvider creates an instance of TabManager, which listens to tab index changes and notifies its listeners.
           ChangeNotifierProvider(create: (context) => TabManager()),
           // TODO 10: Add GroceryManager Provider
         ],
